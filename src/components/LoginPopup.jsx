@@ -36,13 +36,13 @@ export const LoginPopup = () => {
                 <label htmlFor="login" className="login-pop-up__label">
                     Логін
                 </label>
-                <input type="text" id="login" name="login" className="login-pop-up__input" />
+                <input type="text" id="login" name="login" className="login-pop-up__input"/>
 
                 <label htmlFor="password" className="login-pop-up__label">
                     Пароль
                 </label>
-                <input type="password" id="password" name="password" className="login-pop-up__input" />
-                <button type="button" className="login-pop-up__button" onClick={handleLogin}>
+                <input type="password" id="password" name="password" className="login-pop-up__input"/>
+                <button type="submit" className="login-pop-up__button" onClick={handleLogin}>
                     Увійти
                 </button>
             </form>
