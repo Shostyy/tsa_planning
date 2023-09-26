@@ -1,26 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useAuth } from './AuthContext';
 import './Header.scss';
 
 export const Header = () => {
-    const [cookieExists, setCookieExists] = useState(false);
-
-    useEffect(() => {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.startsWith('login=')) {
-                setCookieExists(true);
-                break;
-            }
-        }
-    }, []);
-
-    const clearCookie = (cookieName) => {
-        const expirationDate = new Date();
-        expirationDate.setFullYear(expirationDate.getFullYear() - 1);
-        document.cookie = `${cookieName}=; expires=${expirationDate.toUTCString()}; path=/;`;
-    };
-
+    const { isLoggedIn, logout } = useAuth();
     return (
         <header className="header">
             <nav className="nav">
@@ -30,15 +13,15 @@ export const Header = () => {
                         </a>
                     </li>
                     <li className="nav__item">
-                        {cookieExists ? (
-                            <a href="#log-out" className="nav__link nav__link--login" onClick={() => clearCookie('login')}>
-                                Вийти
-                            </a>
-                        ) : (
-                            <a href="#login-form" className="nav__link nav__link--login">
-                                Ввійти
-                            </a>
-                        )}
+                    {isLoggedIn ? (
+                        <a href="#log-out" className="nav__link nav__link--login" onClick={logout}>
+                        Вийти
+                        </a>
+                    ) : (
+                        <a href="#login-form" className="nav__link nav__link--login">
+                        Ввійти
+                        </a>
+                    )}
                     </li>
                 </ul>
             </nav>
