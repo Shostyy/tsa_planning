@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/tsa-planning/static/css/main.376f11fe.css",
+    "main.js": "/tsa-planning/static/js/main.0af25afe.js",
+    "static/media/logotype.gif": "/tsa-planning/static/media/logotype.8b39369cb4b374dee1cb.gif",
+    "static/media/filter.svg": "/tsa-planning/static/media/filter.d720fd92b5721fa4fcad.svg",
+    "static/media/chartLine.svg": "/tsa-planning/static/media/chartLine.a50d71b4af9bc9ec19e5.svg",
+    "index.html": "/tsa-planning/index.html",
+    "static/media/closeCircle.svg": "/tsa-planning/static/media/closeCircle.dd3c05401f531e5a8b1b.svg",
+    "static/media/operArrow.svg": "/tsa-planning/static/media/operArrow.93baa53e1754c3d0d508.svg",
+    "main.376f11fe.css.map": "/tsa-planning/static/css/main.376f11fe.css.map",
+    "main.0af25afe.js.map": "/tsa-planning/static/js/main.0af25afe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.376f11fe.css",
+    "static/js/main.0af25afe.js"
+  ]
+}
