@@ -2,16 +2,17 @@
 
 .nav {
     box-shadow: 0px 10px 10px -15px #111; 
-
+    padding-left: 70px;
     &__list {
         display: flex;
-        flex-direction: row;
+        flex-grow: 1;
         justify-content: space-between;
         align-items: center;
         padding-inline: 20px;
         padding-block: 7px;
 
         @include onDesktop-s {
+            padding-left: 0;
             max-width: 1024px;
             @include centralize;
         }
@@ -73,4 +74,35 @@
             }
         }
     }
+}
+
+.open_sidebar, .close_sidebar {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    background-image: url(../../public/images/menu-open.svg);
+    background-size: contain;
+    background-position: center;
+    padding-inline: 15px;
+    margin-left: 30px;
+    margin-top: 10px;
+
+    height: 50px;
+
+    background-repeat: no-repeat;
+
+    @include onDesktop-s {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.close_sidebar {
+    background-image: url(../../public/images/close-black.svg);
+}
+
+.close_sidebar {
+    opacity: 0;
+    pointer-events: none;
 }

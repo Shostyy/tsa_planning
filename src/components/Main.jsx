@@ -11,7 +11,8 @@ export const Main = () => {
        <main className="main">
         {isLoggedIn ? (
             <div className="main__content">
-                <nav className="left-sidebar">
+                <nav className="left-sidebar" id="left-sidebar">
+                  
                     <ul className="left-sidebar__list">
                         <li className="left-sidebar__item">
                             <a href="" className="left-sidebar__link left-sidebar__link--open"></a>

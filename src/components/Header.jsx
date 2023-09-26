@@ -6,6 +6,10 @@ export const Header = () => {
     const { isLoggedIn, logout } = useAuth();
     return (
         <header className="header">
+            <a href="#left-sidebar" className="open_sidebar">
+            </a>
+            <a href="#" className="close_sidebar">
+            </a>
             <nav className="nav">
                 <ul className="nav__list">
                     <li className="nav__item">
