@@ -1,0 +1,189 @@
+@import '../styles/modules';
+
+.login-pop-up {
+    box-sizing: border-box;
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+    @include centralize;
+
+    transition: 0.3s;
+    top: -20px;
+    opacity: 0;
+    pointer-events: none;
+
+    &:target {
+        top: 0;
+        opacity: 1;
+        pointer-events: all;
+        z-index: 2;
+    }
+
+    @include onDesktop-s {
+        width: 300px;
+        top: 30px;
+        left:0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding-bottom: 40px;
+
+        border-radius: 10px;
+
+        &:target {
+            top: 40px;
+        }
+    }
+
+    &__description {
+        &-block {
+            position: relative;
+            display: flex;
+            min-height: 20%;
+            background-color: #f91228;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+
+            @include onDesktop-s {
+                padding-block: 35px;
+                padding-top: 50px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            
+        }
+        &-text {
+            color: #fff;
+            font-size: 30px;
+            font-weight: 600;
+
+            @include onTablet {
+                font-size: 34px;
+            }
+
+            @include onDesktop-s {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__close-button {
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        background-image: url("../../public/images/closeCircle.svg");
+        background-size: contain;
+
+        @include hover-scale-1-1;
+
+        @include onDesktop-s {
+            width: 25px;
+            height: 25px;
+
+            right: 12px;
+            top: 12px;
+        }
+    }
+
+    &__form {
+        padding-block: 50px;
+        padding-inline: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include onDesktop-s {
+            padding-inline: 10px;
+            padding-block: 30px;
+        }
+    }
+
+    &__label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        text-align: left;
+
+        &:focus {
+            background-color: #adadad;
+        }
+
+        @include onTablet {
+            font-size: 18px;
+        }
+
+        @include onDesktop-s {
+            font-size: 15px;
+        }
+    }
+
+    &__input {
+        margin-bottom: 18px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: #e0e0e0;
+        transition: 0.3s;
+        padding-inline: 15px;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 20px;
+
+
+        &:hover {
+            box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+        }
+        &:focus {
+            box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f91228;
+        outline: none;
+        border: none;
+        color: #fff;
+        font-family: 'Montserrat', Arial, sans-serif;
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+        }
+        @include onDesktop-s {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+    }
+
+    &__refresh-password, &__refresh-password:visited {
+        color: #3e77aa;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            color: red;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        @include onDesktop-s {
+            font-size: 15px;
+        }
+    }
+}

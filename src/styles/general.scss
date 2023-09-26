@@ -1,0 +1,28 @@
+@import 'reset-css';
+@import 'mixins';
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    //overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #838383;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.3s;
+        opacity: 0;
+    }
+}
+
+body:has(.login-pop-up:target) {
+    &:after {
+        opacity: 0.6;
+        z-index: 1;
+    }
+}
+

@@ -1,0 +1,33 @@
+@import 'variables.scss';
+
+@mixin onTablet {
+    @media (min-width: $tablet-size) {
+      @content;
+    }
+}
+
+@mixin onDesktop-s {
+    @media (min-width: $desktop-size-s) {
+      @content;
+    }
+}
+
+@mixin centralize {
+    margin-inline: auto;
+}
+
+@mixin hover-scale-1-1 {
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin hover-scale-1-05 {
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
