@@ -1,0 +1,102 @@
+@import '../styles/modules';
+
+.table-container {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    border: 2px solid #000;
+
+    th {
+        padding: 3px;
+        font-weight: 700;
+        text-align: left;
+        border: 2px solid #000;
+    }
+    tr {
+        border: 1px solid #000;
+    }
+
+    td {
+        padding-block: 3px;
+        padding-inline: 4px;
+        border: 1px solid #000;
+    }
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between; 
+
+    margin-bottom: 40px;
+
+    span {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 20px;
+
+        @include onDesktop-s {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+    }
+
+    input {
+        border: 1px solid black;
+        outline: none;
+        margin-right: 20px;
+        transition-duration: 0.3s;
+        margin-bottom: 20px;
+
+        height: 20px;
+        min-width: 150px;
+        
+        @include onTablet {
+            min-width: 250px;
+        }
+
+        @include onDesktop-s {
+            margin-bottom: 0;
+            min-width: 0;
+            width: auto;
+        }
+
+        &:hover {
+            background-color: #e8e7e7;
+        }
+    }
+    
+}
+
+.filter-column {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include onDesktop-s {
+        width: auto;
+        display: inline-block;
+        padding-top: 20px;
+    }
+}
+
+.table-container {
+
+    &__header {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+.visibility {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}

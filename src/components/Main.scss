@@ -11,6 +11,8 @@
 
     @include onDesktop-s {
         @include centralize;
+
+        padding-left: 90px;
     }
 
     &__header {
@@ -39,15 +41,17 @@
 }
 
 .left-sidebar {
-    position: relative;
+    position: absolute;
     padding-inline: 10px;
     box-sizing: border-box;
+    top: 50px;
     padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     height: calc(100vh - 50px - 59px);
     overflow: hidden;
+    z-index: 2;
 
     background-color: #33333a;
 
@@ -64,7 +68,12 @@
         left: 0;
     }
 
+    @include onTablet {
+        top: 74px;
+    }
+
     @include onDesktop-s {
+        
         width: 80px;
         opacity: 1;
         pointer-events: all;
@@ -159,11 +168,14 @@
             background-image: url("../../public/images/chartLine.svg");
         }
 
+        
+        
         &--open:after {
             width: 0;
             height: 0;
             display: none;
 
+            
             @include onDesktop-s {
                 width: 50px;
                 height: 50px;
@@ -221,8 +233,22 @@
   .dropdown-list li a {
     color: #fff;
     text-decoration: none;
-    text-decoration: underline;
+    text-decoration: none;
     transition-duration: 0.3s;
 
     
   }
+
+.main__content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0;
+
+    overflow: scroll;
+    height: calc(100vh - 50px - 59px);
+        
+    @include onTablet {
+        height: calc(100vh - 74px - 50px);
+    }
+}
